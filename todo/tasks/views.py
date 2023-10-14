@@ -7,3 +7,6 @@ def helloWorld(request):
 
 def listaTarefas(request):
     return render(request, 'tasks/list.html')
+
+def retornaNome(request, name):
+    return render(request, 'tasks/yourname.html', {'name': name})
