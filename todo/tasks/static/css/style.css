@@ -23,6 +23,8 @@
 }
 
 /* Botão de adicionar */
+
+
 .add-div{
     background-color: blue;
     cursor: pointer;
@@ -31,6 +33,10 @@
     padding: 8px;
     border-radius: 5px;
     margin-right: 25px;
+}
+
+#add-link{
+    text-decoration: none;
 }
 
 .fas.fa-plus{
