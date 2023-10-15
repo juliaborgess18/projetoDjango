@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.http import HttpResponse
 from .models import Task
 from .forms import TaskForm
+from django.contrib import messages
 
 # Create your views here.
 def listaTarefas(request):
@@ -36,6 +37,13 @@ def editTask(request, id):
             return redirect('/')
 
     return render(request, 'tasks/edittask.html', {'form': form, 'task': task})
+
+def deleteTask(request, id):
+    task = get_object_or_404(Task, pk=id)
+    task.delete()
+
+    messages.info(request, "Tarefa deletada!")
+    return redirect('/')
 
 def helloWorld(request):
     return HttpResponse('hello World')

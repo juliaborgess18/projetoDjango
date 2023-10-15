@@ -7,5 +7,6 @@ urlpatterns = [
     path("task/<int:id>", views.taskViewSpecific, name='listaTarefaEspecífica'),
     path("newtask/", views.newTask, name="newTask"),
     path("edittask/<int:id>", views.editTask, name="editTask"),
+    path("deletetask/<int:id>", views.deleteTask, name="deleteTask"),
     path("yourName/<str:name>", views.retornaNome, name='retornaNome'),
 ]
